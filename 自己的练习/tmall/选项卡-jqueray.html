@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{margin: 0 ; top:0}
+    /*ul{list-style: none;}*/
+    .contner{
+        position:absolute;
+               left: 100px;
+               top:100px;
+
+               }
+   .content{
+              border:1px solid black;
+               width: 200px;
+                height: 200px;}
+    ul{overflow: hidden;list-style: none;}
+    li{
+       float: left;
+       border:1px solid black;
+       margin-right: 5px;
+        left: 0;
+    }
+    .content div{display: none;}
+    #active{display:block;}
+    #select{background: deepskyblue;}
+
+</style>
+<body>
+<div class="contner">
+    <ul>
+        <li id="select">娱乐</li>
+        <li>体育</li>
+        <li>新闻</li>
+    </ul>
+    <div class="content">
+        <div id="active">娱乐</div>
+        <div>体育</div>
+        <div>新闻</div>
+    </div>
+</div>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+$('content li').click(function(
+})
+</script>
+</html>

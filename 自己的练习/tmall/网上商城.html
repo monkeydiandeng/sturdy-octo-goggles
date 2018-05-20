@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上商城</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    a{text-decoration: none;}
+    li{list-style: none;}
+    .header{height:105px;
+             background: #f0f0f0;}
+    .content{margin: 0 auto;
+              text-align: center;
+              width: 990px;
+              height: 105px;
+              position: relative;
+              overflow: hidden;}
+    .img{float: left;}
+    .search{float: left;
+              margin-left: 50px;
+              margin-top: 25px;}
+    #searchbox{width: 220px;
+                height: 25px;
+                color: gainsboro;}
+    .nav{width: 990px;
+         height:37px;
+         background: orange;
+         position: absolute;
+         bottom: 0;
+         line-height: 37px;}
+    .nav a{color: white;margin-left: 30px;float: left;}
+    .contener{width: 990px;height: 1000px;margin: 0 auto;overflow: hidden;margin-top: 10px;}
+    .choosebox li{width: 79px;height: 24px;font-size: 12px;float: left;}
+    .choosebox div{width: 158px;height: 100px;margin-left: 10px;border-top: 1px solid gainsboro;}
+    .choosebox{width: 183px;overflow: hidden;border: 1px solid black;}
+    .toph5{background: orange;width:185px;height: 30px;line-height: 30px;color: white;text-indent: 13px;}
+    h6{text-indent: 13px;margin:5px 0 5px 0;}
+    .contener-top-box{width: 185px;float: left;}
+    .big-image-box{position: relative;
+        float: left;
+        margin-left:10px;
+        overflow: hidden;
+        width: 550px;
+        height: 321px;}
+    .big-image-box img{position: absolute;}
+    .small-box{z-index: 10}
+    .big-image-box-a{display:block; height:321px;}
+</style>
+<body>
+<div class="header">
+    <div class="content">
+        <div class="img">
+          <img src="images/logo.gif" alt="">
+        </div>
+        <div class="search">
+          <input id="searchbox" type="text" value="请输入商品名称">
+        </div>
+        <div class="nav">
+            <a href="">首页</a>
+            <a href="">品牌</a>
+            <a href="">女装</a>
+            <a href="">男装</a>
+            <a href="">鞋包配饰</a>
+        </div>
+    </div>
+</div>
+<div class="contener">
+    <div class="contener-top-box">
+    <h5 class="toph5">商品分类</h5>
+    <div class="choosebox">
+
+        <h6 >推荐品牌</h6>
+    <div>
+      <ul>
+        <li>耐克</li><li>阿迪</li><li>耐克</li><li>阿迪</li><li>耐克</li><li>阿迪</li><li>耐克</li><li>阿迪</li>
+      </ul>
+    </div>
+        <h6>男装</h6>
+    <div>
+      <ul>
+        <li>外衣</li><li>夹克</li><li>外衣</li><li>夹克</li><li>外衣</li><li>夹克</li><li>外衣</li><li>夹克</li>
+      </ul>
+    </div>
+        <h6>女装</h6>
+    <div>
+      <ul>
+        <li>裙子</li><li>牛仔裤</li><li>裙子</li><li>牛仔裤</li><li>裙子</li><li>牛仔裤</li><li>裙子</li><li>牛仔裤</li>
+      </ul>
+    </div>
+        <h6>鞋包配饰</h6>
+    <div>
+      <ul>
+        <li>男鞋</li><li>女鞋</li><li>男鞋</li><li>女鞋</li><li>男鞋</li><li>女鞋</li><li>男鞋</li><li>女鞋</li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    <div class="big-image-box">
+        <a class=big-image-box-a href="">
+        <img src="images/网上商城-images/1.jpg" alt="">
+        <img src="images/网上商城-images/2.jpg" alt="">
+        <img src="images/网上商城-images/3.jpg" alt="">
+        <img src="images/网上商城-images/4.jpg" alt="">
+        <img src="images/网上商城-images/5.jpg" alt="">
+        </a>
+        <div class="small-box">
+        <ul >
+            <li>新款上线 全场9折</li>
+            <li>相约情人节 只要998</li>
+            <li>愤怒的小鸟 等你参与</li>
+            <li>男鞋促销 全场1折</li>
+            <li>春季新品发布会 跳楼甩卖</li>
+        </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

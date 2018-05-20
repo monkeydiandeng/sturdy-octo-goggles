@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        *{margin: 0;padding: 0}
+        #image-box{width: 400px;height:400px;float: left;position: relative;}
+        #drag{width: 200px;height: 200px;position: absolute;display: none;
+               background: rgba(255,255,255,0.4);;left: 0;top: 0}
+        #big-image-box{width: 400px;
+                         height:400px;
+                         float: left;
+                           overflow: hidden;
+                          /*background: url("images/2.jpg")0 0 no-repeat;*/
+                          display: none;position:relative;}
+        #big-img{position: absolute;}
+    </style>
+</head>
+<body>
+<div id="image-box">
+    <img src="images/1.jpg" alt="">
+    <div id="drag"></div>
+</div>
+<div id="big-image-box">
+    <img src="images/2.jpg" id="big-img" alt=""/>
+</div>
+<script>
+    var oimagebox=document.getElementById("image-box");
+    var odrag=document.getElementById('drag');
+    var obigimagebox=document.getElementById('big-image-box');
+
+    var obigimg=document.getElementById("big-img" );
+    oimagebox.onmouseover=function(e){
+
+        odrag.style.display="block";
+        obigimagebox.style.display='block';
+//
+
+
+        oimagebox.onmousemove=function(e) {
+
+            var left=e.clientX-odrag.offsetWidth/2;
+            var top=e.clientY-odrag.offsetHeight/2;
+            if (left<=0){left=0}
+            if (left>=200){left=200}
+            if(top<=0){top=0}
+            if (top>=200){top=200}
+            odrag.style.left=left+'px';
+            odrag.style.top=top+'px';
+            var xscale=left/oimagebox.offsetWidth;
+            var yscale=top/oimagebox.offsetHeight;
+            obigimg.style.left=-obigimg.offsetWidth*xscale+'px';
+            obigimg.style.top=-obigimg.offsetHeight*yscale+'px'
+        }
+        };
+    oimagebox.onmouseout=function(e){
+             odrag.style.display= 'none';
+             obigimagebox.style.display='none'}
+
+</script>
+</body>
+</html>

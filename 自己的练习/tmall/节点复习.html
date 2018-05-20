@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0 ;padding: 0}
+       #div1{height: 200px;
+              width: 200px;
+              background: red;
+               position: absolute;}
+    </style>
+</head>
+<body>
+<div id="div1">
+
+</div>
+<script>
+var odiv1=document.getElementById("div1");
+odiv1.onmousedown=function(e){
+    var disx=e.clientX-odiv1.offsetLeft;
+//    鼠标到odiv左边的距离等于鼠标的左边距减去odiv的左边距
+    var disy=e.clientY-odiv1.offsetTop;
+//    鼠标到odiv上边的距离等于鼠标的上边距减去odiv的上边距
+    document.onmousemove=function(e){
+        odiv1.style.left=e.clientX-disx+"px";
+//        odiv的左边距等于鼠标的左边距减去鼠标到odiv左边的距离
+        odiv1.style.top=e.clientY-disy+"px";
+//        odiv的上边距等于鼠标的上边距减去鼠标到odiv上边的距离
+    }
+}
+odiv1.onmouseup=function(){ document.onmousemove=null
+
+}
+</script>
+</body>
+</html>

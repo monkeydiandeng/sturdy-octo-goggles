@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        #content{text-align: center;margin: 50px auto;position: relative;overflow: hidden;}
+
+        #small-img-box li{float: left;margin: 6px;}
+        #small-img-box img{width:120px;height:94px;}
+        #small-img-box{overflow: hidden;
+                         width:400px;height:114px;
+                         margin: 0 auto;text-align: center;background: gainsboro;}
+        #big-img-box{width: 400px;height: 320px;overflow: hidden;margin: 0 auto;position: relative;
+                       }
+        #big-img-box img{width: 400px;height: 320px;display: block;}
+        #button{position:absolute;left:5px;top:150px;width: 400px;}
+        #button span{color: gainsboro;font-size: 50px;
+                      width:50px ;height: 50px;background: white;
+                       border: 2px gainsboro solid;border-radius: 10px;}
+        #botttom-img-box{width: 762px;height:104px; }
+        #left-button{margin-right: 250px;}
+        #top-img-box{position: absolute;}
+        /*#button{display: none;}*/
+
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="big-img-box">
+        <div id="top-img-box">
+             <ul>
+                 <li><img src="images/幻灯片图片/1.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/2.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/3.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/4.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/5.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/6.jpg" alt=""></li>
+              </ul>
+        </div>
+        <div id="button">
+            <span id="left-button">&lt</span>
+            <span id="right-button">&gt</span>
+        </div>
+    </div>
+    <div id="small-img-box">
+        <div id="botttom-img-box">
+              <ul>
+                 <li><img src="images/幻灯片图片/1.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/2.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/3.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/4.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/5.jpg" alt=""></li>
+                 <li><img src="images/幻灯片图片/6.jpg" alt=""></li>
+             </ul>
+        </div>
+    </div>
+
+</div>
+<script>
+    var orightbutton=document.getElementById('right-button');
+    var oleftbutton=document.getElementById('left-button');
+    var otopimgbox=document.getElementById("top-img-box");
+//    var oul=otopimgbox.getElementsByTagName('ul');
+    var otopimg=otopimgbox.getElementsByTagName("li");
+    var obutton=document.getElementById('button');
+    var count=0;
+//    orightbutton.onclick=function(){
+//        for(var i=0;i<otopimg.length;i++){
+//            otopimg[i].index=i;
+//            otopimgbox.style.top=-this.index*320+"px";
+//        }}
+//    obutton.onmouseover=
+//        function(e){
+//            obutton.style.display='block'
+//    };
+
+    orightbutton.onclick=function(){
+        count++;
+        for(var i=0;i<otopimg.length;i++){
+            if(count==otopimg.length){count=0;}
+
+            otopimgbox.style.top=-count*320+"px";
+        }};
+    oleftbutton.onclick=function(){
+        count--;
+        for(var i=0;i<otopimg.length;i++){
+            if(count==-1){count=otopimg.length-1;}
+
+            otopimgbox.style.top=-count*320+"px";
+        }}
+</script>
+</body>
+</html>
