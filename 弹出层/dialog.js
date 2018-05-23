@@ -3,7 +3,14 @@
  */
 
 var dialog={
-    open:function(){
+    open:function(obj){
+        var $dialogmask= $( '<div class="dialog-mask"></div>').css({
+            width:obj.width,
+            height:obj.height
+        });
+
+
+    }
         var html= '<div class="dislog-mask">'
             +'<div class="dislog-box">'
             +'<div class="dialog-title">'
@@ -19,4 +26,8 @@ var dialog={
         height:obj.height
     });
 $( '.dialog-title h2').html(obj,title);
+$('.dialog-content').load(obj,content);
+$('.dialog-close').load(obj,function(){
+       $('.dialog-mask').remove();
+    })
 }
