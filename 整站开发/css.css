@@ -1,0 +1,17 @@
+*{margin: 0;
+padding: 0}
+ul{list-style: none;}
+.choose-box{margin-left: 145px;display: inline-block;}
+.header{width:1280px;
+         height:120px;
+         margin:0 auto;
+         background: gainsboro;}
+.img{float: left;
+      margin-left: 139px;
+       margin-top: 35px;}
+.choose-box li{float: left;
+                 margin: 0 25px;line-height: 120px;}
+.search-box{width: 130px;
+              height: 30px;
+              float: right;
+              margin-right: 140px;line-height: 120px;}
