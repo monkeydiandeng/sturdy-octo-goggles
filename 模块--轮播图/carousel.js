@@ -17,5 +17,6 @@ define([''],function(){
             $(this.tab).append('<li class="${i==0?"selected";""}">${i+1}</li>')
             $(this.container).append('')
         }
+
     }
 });
