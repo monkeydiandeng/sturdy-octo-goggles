@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>克隆</title>
+</head>
+<body>
+
+<script>
+     var person1={
+         name:'lisi',
+         age:20,
+         father:{
+             name:'zhangsan',
+             age:50
+         }
+     };
+//     var person2={};
+//     for(key in person1){
+//         person2[key]=person1[key];
+//     }
+
+      function clone(obj){
+         var resobj={};
+         for(key in obj){
+             if(obj[key] instanceof  Object){
+                 resobj[key]=clone(obj[key]);
+             }else{
+                 resobj[key]=obj[key];
+             }
+
+         }
+         return resobj;
+      }
+    var person2=clone(person1);
+     person1.father.name = 'zxx';
+      console.log( person2.father.name)
+</script>
+</body>
+</html>
