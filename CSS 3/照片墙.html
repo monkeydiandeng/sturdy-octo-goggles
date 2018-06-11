@@ -17,6 +17,12 @@
               left:-135px;
               top:-135px;
               -webkit-transition: all 1.5s ease 0.5s;}
+        .img span{width:125px;
+                   height:125px;
+                   /*background: red;*/
+                   display: block;
+                   opacity:0;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +62,11 @@
         for( var i=0;i<4;i++){
             for(  j=0;j<6;j++){
                index++;
+
                 var oDiv =document.createElement('div');
+                oDiv.idx=index;
+                oDiv.row = i; //所在行数
+                oDiv.col = j;//所在列数
                 oDiv.className='img';
                 oDiv.style.background='url(image/small-img/'+index+'.jpg)';
                 Ocontainer.appendChild(oDiv);
@@ -66,23 +76,42 @@
                 oDiv.style.left=(j+1)*iSpaceX+j*135+'px';
                 oDiv.style.top=(i+1)*iSpaceY+i*135+'px';
                 oDiv.style.webkitTransform = "rotate("+ (Math.random()-0.5)*40+"deg)";
-                oDiv.style.webkitTransform='rotate('+(Math.random()-0.5)*40+'deg)';
+//                oDiv.style.webkitTransform='rotate('+(Math.random()-0.5)*40+'deg)';
                 oDiv.style.webkitTransitionDelay = (23-index)*100+"ms";
+                oDiv.innerHTML='<span></span>';
             }
         }
 
     }
     //图片之间的缝隙
     var aDiv= Ocontainer.getElementsByTagName('div');
-    var iLeft = (Ocontainer.offsetWidth - 6*127)/2;
-    var iTop = (Ocontainer.offsetHeight - 4*127)/2;
+//    var iLeft = (Ocontainer.offsetWidth - 6*127)/2;
+//    var iTop = (Ocontainer.offsetHeight - 4*127)/2;
+    var iLeft = (document.body.offsetWidth - 6*127)/2;
+    var iTop = (document.body.offsetHeight - 4*127)/2;
 
-        function fn(){
+        function fn(){console.log(33333);
             for (var i=0;i<aDiv.length;i++){
-        aDiv[i].style.left=iLeft+(aDiv[i].col-1)*127+'px';
-        aDiv[i].style.top=iTop+(aDiv[i].row-1)*127+'px';
+                       aDiv[i].style.left=iLeft+(aDiv[i].col)*127+'px';
+                       aDiv[i].style.top=iTop+(aDiv[i].row)*127+'px';
+                       aDiv[i].style.border="1px solid white ";
+                       aDiv[i].style.webkitTransform = "rotate(0deg)";
+                       aDiv[i].style.webkitTransitionDelay = "0ms";
+                       aDiv[i].style.webkitTransitionDuration ='1000ms';
+                       var oSpan= aDiv[i].getElementsByTagName('span')[0];
+//                       var Bleft=-(aDiv[i].col-1)*125;
+//                       var Btop=-(aDiv[i].row-1)*125;
+                       var Bleft=-aDiv[i].col*125;
+                       var Btop=-aDiv[i].row*125;
+//                       console.log(this.idx)
+                       oSpan.style.background='url(image/big-img/'+this.idx+'.jpg)  '+Bleft+'px '+Btop+'px repeat'
+                       oSpan.style.opacity=1;
+//
+
            }
+
     }
+
 
 </script>
 </body>
