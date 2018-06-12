@@ -9,7 +9,8 @@
         html,body{height: 100%;}
         #container{width: 100%;
                     height: 100%;
-                    background: url("image/bg.jpg") 0 0 repeat;}
+                    background: url("image/bg.jpg") 0 0 repeat;
+                    position: relative;}
         .img{width:125px;
               height:125px;
               border:5px solid white;
@@ -23,12 +24,30 @@
                    display: block;
                    opacity:0;
         }
+        .left{
+            background: #fff url("image/prev.png") center center no-repeat;
+               height:200px;
+              position: absolute;
+               margin-top: 50%;
+              top:-100px;
+               left: 0;
+
+             display: none;}
+        .right{
+            background: #fff url("image/prev.png") center center no-repeat;
+            height:200px;
+            position: absolute;
+            margin-top: 50%;
+            top:-100px;
+            right: 0;
+
+            display: none;}
     </style>
 </head>
 <body>
 <div id="container">
-    <!--<span class="left"></span>-->
-    <!--<span class="right"></span>-->
+    <span class="left"></span>
+    <span class="right"></span>
 </div>
 <script>
     var Ocontainer=document.getElementById('container');
@@ -89,29 +108,73 @@
 //    var iTop = (Ocontainer.offsetHeight - 4*127)/2;
     var iLeft = (document.body.offsetWidth - 6*127)/2;
     var iTop = (document.body.offsetHeight - 4*127)/2;
+    var oleft=document.getElementsByClassName('left');
+    var oright=document.getElementsByClassName('right');
+    var oSpan = aDiv[i].getElementsByTagName('span')[0];
+    var flag=true;
+        function fn() {
+            if (flag) {
+                for (var i = 0; i < aDiv.length; i++) {
+                    aDiv[i].style.left = iLeft + (aDiv[i].col) * 127 + 'px';
+                    aDiv[i].style.top = iTop + (aDiv[i].row) * 127 + 'px';
+                    aDiv[i].style.border = "1px solid white ";
+                    aDiv[i].style.webkitTransform = "rotate(0deg)";
+                    aDiv[i].style.webkitTransitionDelay = "0ms";
+                    aDiv[i].style.webkitTransitionDuration = '1000ms';
 
-        function fn(){console.log(33333);
-            for (var i=0;i<aDiv.length;i++){
-                       aDiv[i].style.left=iLeft+(aDiv[i].col)*127+'px';
-                       aDiv[i].style.top=iTop+(aDiv[i].row)*127+'px';
-                       aDiv[i].style.border="1px solid white ";
-                       aDiv[i].style.webkitTransform = "rotate(0deg)";
-                       aDiv[i].style.webkitTransitionDelay = "0ms";
-                       aDiv[i].style.webkitTransitionDuration ='1000ms';
-                       var oSpan= aDiv[i].getElementsByTagName('span')[0];
-//                       var Bleft=-(aDiv[i].col-1)*125;
-//                       var Btop=-(aDiv[i].row-1)*125;
-                       var Bleft=-aDiv[i].col*125;
-                       var Btop=-aDiv[i].row*125;
-//                       console.log(this.idx)
-                       oSpan.style.background='url(image/big-img/'+this.idx+'.jpg)  '+Bleft+'px '+Btop+'px repeat'
-                       oSpan.style.opacity=1;
 //
+                    var Bleft = -aDiv[i].col * 125;
+                    var Btop = -aDiv[i].row * 125;
+//                       console.log(this.idx)
+                    oSpan.style.background = 'url(image/big-img/' + this.idx + '.jpg)  ' + Bleft + 'px ' + Btop + 'px repeat'
+                    oSpan.style.opacity = 1;
 
-           }
+                }
+                iNow = this.idx;
+                oleft.style.display='block';
+                oright.style.display='block';
+            }
+            else{
+                for( var i=0;i<aDiv.length;i++) {
 
+                        aDiv[i].row = i; //所在行数
+                        aDiv[i].col = j;
+                        var iSpaceX =( Ocontainer.offsetWidth - 135*6 )/7;
+                        var iSpaceY =( Ocontainer.offsetHeight - 135*4 )/5;
+                        aDiv[i].style.left=(j+1)*iSpaceX+j*135+'px';
+                        aDiv[i].style.top=(i+1)*iSpaceY+i*135+'px';
+                        aDiv[i].style.border = '5px solid #fff';
+                        aDiv[i].style.webkitTransform = "rotate("+ (Math.random()-0.5)*40+"deg)";
+
+                        oSpan.style.opacity = 0;
+
+                }
+                oleft.style.display='none';
+                oright.style.display='none';
+
+            }
+            flag=!flag
+        }
+        oleft.onclick=function(){
+            iNow--;
+            if(iNow==0){
+                iNow=24
+            }
+            for(var i=0; i<aSpan.length; i++){
+                oSpan[i].style.webkitTransitionDelay = Math.random()*500 +"ms";
+                oSpan[i].style.backgroundImage = "url(img/"+iNow+".jpg) ";
+            }
+        }
+    oright.onclick=function(){
+        iNow++;
+        if(iNow==25){
+            iNow=1
+        }
+        for(var i=0; i<aSpan.length; i++){
+            oSpan[i].style.webkitTransitionDelay = Math.random()*500 +"ms";
+            oSpan[i].style.backgroundImage = "url(img/"+iNow+".jpg) ";
+        }
     }
-
 
 </script>
 </body>
