@@ -14,33 +14,47 @@
                margin: 0 auto;
                margin-top: 100px;
                position: relative;}
-        .div1{width: 3px;
-               height: 120px;
+        .hour{width: 6px;
+               height: 60px;
                background: red;
                position: absolute;
                top: 30px;
-               left:  150px;}
-        .div2{width: 4px;
+               left:  150px;
+               margin-left: -3px;}
+        .minute{width: 4px;
                height: 100px;
                background: greenyellow;
                position: absolute;
                top: 50px;
-               left:150px;}
-        .div3{width: 5px;
-               height: 60px;
-               margin-left:150px;
+               left:150px;
+               margin-left: -2px;}
+        .second{width: 2px;
+               height: 120px;
+               left:150px;
                background: black;
                position: absolute;
-               top: 150px;}
+               top: 150px;
+               margin-left: -1px;
+        }
 
     </style>
 </head>
 <body>
 <div class="parents">
-       <div class="div1"></div>
-       <div class="div2"></div>
-       <div class="div3"></div>
+       <div class="hour"></div>
+       <div class="minute"></div>
+       <div class="second"></div>
 
 </div>
+<script>
+    var oparents=document.getElementsByClassName("parents")[0];
+    var ohour=oparents.getElementsByClassName("hour")[0];
+    var ominute=oparents.getElementsByClassName("minute")[0];
+    var osecond=oparents.getElementsByClassName("second")[0];
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+</script>
 </body>
 </html>

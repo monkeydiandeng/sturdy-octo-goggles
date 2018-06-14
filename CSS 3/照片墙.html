@@ -121,18 +121,16 @@
                     aDiv[i].style.webkitTransform = "rotate(0deg)";
                     aDiv[i].style.webkitTransitionDelay = "0ms";
                     aDiv[i].style.webkitTransitionDuration = '1000ms';
-
-//
                     var Bleft = -aDiv[i].col * 125;
                     var Btop = -aDiv[i].row * 125;
-//                       console.log(this.idx)
+//
                     oSpan.style.background = 'url(image/big-img/' + this.idx + '.jpg)  ' + Bleft + 'px ' + Btop + 'px repeat'
                     oSpan.style.opacity = 1;
-
+                    oleft.style.display='block';
+                    oright.style.display='block';
                 }
                 iNow = this.idx;
-                oleft.style.display='block';
-                oright.style.display='block';
+
             }
             else{
                 for( var i=0;i<aDiv.length;i++) {
@@ -147,10 +145,10 @@
                         aDiv[i].style.webkitTransform = "rotate("+ (Math.random()-0.5)*40+"deg)";
 
                         oSpan.style.opacity = 0;
-
+                        oleft.style.display='none';
+                        oright.style.display='none';
                 }
-                oleft.style.display='none';
-                oright.style.display='none';
+
 
             }
             flag=!flag
