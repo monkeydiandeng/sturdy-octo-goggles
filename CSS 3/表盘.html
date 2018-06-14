@@ -6,6 +6,7 @@
     <style>
         *{margin: 0;
           padding: 0}
+        li{list-style: none;}
         .parents{
                width: 300px;
                height: 300px;
@@ -18,7 +19,7 @@
                height: 60px;
                background: red;
                position: absolute;
-               top: 30px;
+               top: 90px;
                left:  150px;
                margin-left: -3px;}
         .minute{width: 4px;
@@ -37,10 +38,46 @@
                margin-left: -1px;
         }
 
+        .parents li:nth-child(1){
+              width:2px;
+              height: 10px;
+              background: black;
+              position: absolute;
+              left:150px;
+              margin-left: -1px;
+        }
+        .parents li{
+            width:2px;
+            height: 5px;
+            background: black;
+            position: absolute;
+            left:150px;
+            margin-left: -1px;
+            -webkit-transform-origin: 1px 150px;
+        }
+        .parents li:nth-child(5n+1){
+            height: 10px;
+        }
+        .hour{
+            -webkit-transform-origin: 3px 60px;
+        }
+        .minute{
+            -webkit-transform-origin: 2px 100px;
+        }
+        .second{
+            -webkit-transform-origin: 2px 0;
+        }
     </style>
 </head>
 <body>
 <div class="parents">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
        <div class="hour"></div>
        <div class="minute"></div>
        <div class="second"></div>
@@ -48,13 +85,31 @@
 </div>
 <script>
     var oparents=document.getElementsByClassName("parents")[0];
+    var oul=oparents.getElementsByTagName('ul')[0];
+    var  sLi='';
     var ohour=oparents.getElementsByClassName("hour")[0];
     var ominute=oparents.getElementsByClassName("minute")[0];
     var osecond=oparents.getElementsByClassName("second")[0];
-    var date = new Date();
-    var hour = date.getHours();
-    var minute = date.getMinutes();
-    var second = date.getSeconds();
+    for(i=0;i<60;i++){
+        sLi +='<li style="-webkit-transform: rotate('+i*6+'deg)"></li>'
+    }
+    oul.innerHTML=sLi;
+
+
+    function time() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+        ohour.style.webkitTransform='rotate('+(hour*30+minute*0.5)+'deg)';
+        ominute.style.webkitTransform='rotate('+(minute*6+second*0.1)+'deg)';
+        osecond.style.webkitTransform='rotate('+(second*6)+'deg)';
+    }
+//    time();
+    setInterval(function () {
+        time()
+    },1000)
+
 </script>
 </body>
 </html>
