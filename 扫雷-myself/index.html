@@ -11,58 +11,59 @@
         #box{width: 400px;
               height: 400px;
              border: 5px blueviolet solid;
-             margin: 200px auto;}
-      /*#btn{*/
-          /*width: 19px;*/
-          /*height: 19px;*/
-          /*border: 1px black solid;*/
-      /*}*/
-        #abtn{
+             margin: 200px auto;
+             position: relative;}
+        .btn{
             width: 38px;
             height: 38px;
             border: 1px black solid;
             float: left;
             background:gainsboro;
+
         }
-        #abackgd{
-            width: 38px;
-            height: 38px;
-            border: 1px black solid;
-            float: left;
-            background:ghostwhite;
+        .btn span{
+                   display: block;
+                   width: 38px;
+                   height: 38px;
+                   /*background:red;*/
+                   opacity: 1;
         }
+
+
     </style>
 </head>
 <body>
 <div id="box">
-    <!--<div id="backgd">-->
-        <!---->
-    <!--</div>-->
-    <!--<div id="btn">-->
 
-    <!--</div>-->
+
 </div>
+<script src="jquery-1.12.4.js"></script>
 <script>
 var obox=document.getElementById('box');
-//var obackgd=document.getElementById("backgd");
-var oBtn=document.getElementById('abtn');
-var abackground='';
-var abutton='';
-    for (var i=0;i<100;i++){
-        abackground+='<div id="abackgd"></div>'
-    }
-obox.innerHTML=abackground;
-    for (var i=0;i<100;i++){
-        abutton+='<div id="abtn"></div>'
-    }
-obox.innerHTML=abutton;
-
-    for(var i=0;i<oBtn.length;i++){
-        oBtn[i].onclick=function(){
-        console.log('oBtn[i]');
-        oBtn[i].style.display='none'
-    }
+for( var i=0;i<100;i++){
+    var oDiv =document.createElement('div');
+    oDiv.className='btn';
+    obox.appendChild(oDiv);
+    oDiv.innerHTML='<span></span>';
 }
+var oSpan=oDiv.getElementsByTagName('span');
+for(i=0;i<10;i++){
+   var idx=Math.random()*100;
+    if (idx>=100){
+        idx=Math.random()*100;
+    }
+    else{
+          oSpan[idx].style.background='red'}
+
+}
+
+//    for(var j=0;j<100;j++){
+//        index++;
+//        oBtn[index].onclick=function(){
+////        console.log(oBtn.length);
+//        this.style.display='none';
+//    }
+//}
 </script>
 </body>
 </html>
