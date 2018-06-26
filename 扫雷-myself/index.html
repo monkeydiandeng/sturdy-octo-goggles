@@ -48,14 +48,17 @@ for( var i=0;i<100;i++){
 }
 var oSpan=oDiv.getElementsByTagName('span');
 for(i=0;i<10;i++){
-   var idx=Math.random()*100;
-    if (idx>=100){
-        idx=Math.random()*100;
-    }
-    else{
-          oSpan[idx].style.background='red'}
-
+    oSpan[i].style.background='red'
 }
+//for(i=0;i<10;i++){
+//   var idx=Math.random()*100;
+//    if (idx>=100){
+//        idx=Math.random()*100;
+//    }
+//    else{
+//        oSpan[idx].style.background='red'
+//    }
+//}
 
 //    for(var j=0;j<100;j++){
 //        index++;
