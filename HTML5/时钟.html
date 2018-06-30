@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<canvas id="cvs" width="600" height="600"></canvas>
+
+
+</body>
+<script>
+var cvs1=document.getElementById("cvs");
+var octx=cvs1.getContext('2d');
+//oCtx.moveTo(300,300);
+//oCtx.arc(300,300,100,i*6*Math.PI/180,(i+1)*6*Math.PI/180);
+for (var i=0;i<60;i++){
+    octx.moveTo(300,300);
+    octx.arc(300,300,100,i*6*Math.PI/180,(i+1)*6*Math.PI/180,false);
+    octx.stroke()
+}
+
+</script>
+</html>
