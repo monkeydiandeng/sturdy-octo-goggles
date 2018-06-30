@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+       body{
+           background-color: black;
+       }
+        #cvs{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
 <canvas id="cvs" width="500" height="500"></canvas>
+
 <script>
-    var ocvs=document.getElementById('cvs');
-    var cxt=ocvs.getContext("2d");
+   var cvs1=document.querySelector('#cvs');
+   var octx= cvs1.getContext('2d');
+   cvs1.onmousedown=function(e){
+       octx.moveTo(e.clientX,e.clientY);
+
+       cvs1.onmousemove=function(e){
+           octx.lineTo(e.clientX,e.clientY);
+           octx.stroke()}
+   };
+   cvs1.onmouseup=function(){
+       cvs1.onmousemove=null;
+   }
+
 </script>
 </body>
 </html>
