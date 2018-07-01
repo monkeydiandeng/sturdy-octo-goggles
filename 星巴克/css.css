@@ -1,0 +1,118 @@
+*{margin: 0;
+  padding: 0}
+ul {
+    list-style: none;
+}
+a{text-decoration: none;}
+
+/*//左半部分//*/
+#left-box{
+           width: 404px;
+    height: 100%;
+    position: fixed;
+    /*background-color: gainsboro;*/
+}
+#menu{width: 404px;
+       height: 69px;
+       }
+#menu img{width: 36px;
+          height:36px;
+          }
+#menu li{
+          float: left;
+          margin-left: 20px;
+          margin-top: 20px;
+          /*line-height: 404px;*/
+}
+#menu ul{margin:0 auto;}
+#menu a{color: #4A4A4A;
+         }
+#login{
+    width: 404px;
+    overflow: hidden;
+}
+#login h1{color: black;
+margin-left:50px ;
+    margin-top: 100px
+}
+#login span{color: green;
+    display: inline-block;
+    float: left;
+    margin-top: 50px;
+    margin-left:80px;
+    border:1px solid green;
+    border-radius: 5px;
+             }
+
+#right-box,#left-box{float: left;}
+/*//右半部分//*/
+#right-box{
+    width:944px;
+    height:1700px;
+    background-color: gainsboro;
+    position: absolute;
+    left:404px;
+}
+#top-img{width: 944px;
+ height:442px;
+}
+#top-img img{width: 944px;
+    height:442px;
+}
+#bottom-img li{width: 282px;
+             height:180px;
+             float: left;
+             background-color: greenyellow;
+margin-left: 20px;}
+#bottom-img img{width: 282px;
+    height:180px;}
+#bottom-img{height: 180px;
+
+}
+ /*///////////*/
+#club-box{width:944px;
+           height:250px;
+    background-color: white;
+}
+#club{width:360px;
+height:250px;
+    margin-left: 100px;
+}
+#pic{width:360px;
+    height:250px;
+background-color: aquamarine;
+    margin-left: 100px;}
+#club h3{margin-top:50px;}
+#club p{margin-top: 50px;}
+#club span{margin-top: 50px;
+    display: inline-block;
+    border:1px solid green;
+    border-radius: 5px;}
+#club,#pic{
+    float: left;
+}
+/*///////*/
+#div3{
+    width: 944px;
+    height:420px;}
+#div4{
+    width: 944px;
+    height:280px;}
+#div3 li{
+    width: 162px;
+    height:196px;
+     float: left;
+background: gold;
+margin-left: 10px;}
+#div4 li{
+    width: 282px;
+    height:180px;
+    float: left;
+    background: coral;
+    margin-left: 10px;}
+/*///////////////////////////////////*/
+@media screen and (max-width: 980px) {
+    div{
+        background: #00ff00;
+    }
+}
