@@ -24,7 +24,13 @@ a{text-decoration: none;}
           margin-top: 20px;
           /*line-height: 404px;*/
 }
+#img1{float: left;
+       margin-top: 15px;
+       margin-left: 15px;}
 #menu ul{margin:0 auto;}
+#icon{float: right;
+       margin-top: 20px;
+       margin-right: 20px;}
 #menu a{color: #4A4A4A;
          }
 #login{
@@ -51,7 +57,8 @@ margin-left:50px ;
     height:1700px;
     background-color: gainsboro;
     position: absolute;
-    left:404px;
+    /*left:404px;*/
+    right:0;
 }
 #top-img{width: 944px;
  height:442px;
@@ -67,6 +74,7 @@ margin-left: 20px;}
 #bottom-img img{width: 282px;
     height:180px;}
 #bottom-img{height: 180px;
+    margin-top: 20px;
 
 }
  /*///////////*/
@@ -79,40 +87,60 @@ height:250px;
     margin-left: 100px;
 }
 #pic{width:360px;
-    height:250px;
-background-color: aquamarine;
-    margin-left: 100px;}
-#club h3{margin-top:50px;}
-#club p{margin-top: 50px;}
+     height:250px;
+     margin-left: 100px;
+     }
+#pic img{width:360px;
+          height:250px;
+}
+#club h3{
+    margin-top:50px;
+}
+#club p{
+    margin-top: 50px;
+}
 #club span{margin-top: 50px;
-    display: inline-block;
-    border:1px solid green;
-    border-radius: 5px;}
+            display: inline-block;
+            border:1px solid green;
+            border-radius: 5px;
+}
 #club,#pic{
     float: left;
 }
 /*///////*/
 #div3{
     width: 944px;
-    height:420px;}
+    height:380px;
+}
 #div4{
     width: 944px;
-    height:280px;}
+    height:300px;
+    background: white;
+}
 #div3 li{
     width: 162px;
     height:196px;
-     float: left;
-background: gold;
-margin-left: 10px;}
+    float: left;
+    background: gold;
+    margin-left: 55px;
+}
+#div3 h1,#div4 h1,#div3 p,#div4 p{
+    text-align: center;
+    margin-top: 20px;
+}
+#div3 ul,#div4 ul{
+    margin-top: 20px;
+}
+
 #div4 li{
     width: 282px;
     height:180px;
     float: left;
     background: coral;
-    margin-left: 10px;}
+    margin-left: 20px;}
 /*///////////////////////////////////*/
 @media screen and (max-width: 980px) {
-    div{
-        background: #00ff00;
-    }
+    /*div{*/
+        /*background: #00ff00;*/
+    /*}*/
 }
