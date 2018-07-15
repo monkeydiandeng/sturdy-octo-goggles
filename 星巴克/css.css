@@ -138,9 +138,13 @@ height:250px;
     float: left;
     background: coral;
     margin-left: 20px;}
-/*///////////////////////////////////*/
-@media screen and (max-width: 980px) {
-    /*div{*/
-        /*background: #00ff00;*/
-    /*}*/
+/*///////艾派德//////*/
+@media screen and (max-width: 768px) and (min-width: 373px) {
+    div{
+        background: #00ff00;
+    }
+}
+/*移动端//////*/
+@media screen and (max-width: 373px)  {
+    #left-box{display:none}
 }
