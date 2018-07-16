@@ -6,48 +6,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>美团移动端</title>
     <link rel="stylesheet" href="icon/iconfont.css">
+    <link rel="stylesheet" href="Css.css">
     <script src="jquery-1.12.4.js"></script>
     <script src="jquery.mobile-1.4.5.js"></script>
     <script  src="rem.js"></script>
     <style>
-        *{margin: 0;
-        padding: 0;}
-        ul{list-style: none}
-        a{text-decoration: none}
-        #header{
-            /*width: 100%;*/
-            height: 0.9rem;
-            background-color:lightseagreen ;
-            display: -webkit-flex;
-        }
-        #place{
-            font-size: 0.25rem;
-        }
-        #myself{
-            font-size: 0.25rem;
-        }
-        /*#search{width: 3rem;}*/
-        /*#search input{width: 3rem;}*/
-        #img-box img{
-            width: 750px;
-            height:220px;
-        }
+
+
     </style>
 </head>
 <body>
 
     <div id="header">
-       <div id="place">
+       <div id="header-left">
            哈尔滨
-        <i  class="iconfont icon-jiantouarrow483"></i>
+            <i  class="iconfont icon-jiantouarrow483"></i>
        </div>
-       <div id="search">
+       <div id="header-search">
            <i  class="iconfont icon-fangdajing"></i>
-           <input type="text" value="搜索">
+            <input type="text" placeholder="输入商家/商品/"/>
        </div>
-       <div id="myself">
-           <i class="iconfont icon-ziyuan"></i>
-        <span>我的</span>
+       <div id="header-right">
+            <i class="iconfont icon-ziyuan"></i>
+            <span>我的</span>
        </div>
     </div>
     <div id="img-box">
@@ -55,17 +36,67 @@
     </div>
     <div id="list">
         <ul>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
-            <li><i class="iconfont icon-ziyuan"></i></li>
+            <li>
+                <i class="iconfont icon-liren"></i>
+                <span>美食</span>
+            </li>
+
+            <li>
+                <i class="iconfont icon-zhoubianyou"></i>
+                <span>娱乐</span>
+            </li>
+
+            <li>
+                <i class="iconfont icon-huochepiao"></i>
+                <span>娱乐</span>
+            </li>
+            <li>
+                <i class="iconfont icon-hotel"></i>
+                <span>美食</span>
+            </li>
+            <li>
+                <i class="iconfont icon-ktv"></i>
+                <span>娱乐</span>
+            </li>
+            <li>
+                <i class="iconfont icon-waimai"></i>
+                <span>外卖</span>
+            </li>
+            <li>
+                <i class="iconfont icon-meishi"></i>
+                <span>外卖</span>
+            </li>
+            <li>
+                <i class="iconfont icon-maoyan"></i>
+                <span>外卖</span>
+            </li>
+            <li>
+                <i class="iconfont icon-xiuxianyule"></i>
+                <span>外卖</span>
+            </li>
+            <li>
+                <i class="iconfont icon--"></i>
+                <span>外卖</span>
+            </li>
         </ul>
+    </div>
+    <div id="list1">
+        <div id="list1-left" class="list1-son">
+            <h2>我们约吧</h2>
+            <span>恋人家人朋友</span>
+            <img src="icon/a06d0c5c0a972e784345b2d648b034ec9710.jpg" alt="">
+        </div>
+        <div id="list1-medium" class="list1-son">
+            <h2>我们约吧</h2>
+            <span>恋人家人朋友</span>
+            <img src="icon/fe4d2e89827aa829e12e2557ded363a112289.png" alt="">
+        </div>
+
+        <div id="list1-right" class="list1-son">
+            <h2>我们约吧</h2>
+            <span>恋人家人朋友</span>
+            <img src="icon/a06d0c5c0a972e784345b2d648b034ec9710.jpg" alt="">
+        </div>
     </div>
 <script>
 

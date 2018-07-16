@@ -1,0 +1,108 @@
+*{margin: 0;
+    padding: 0;}
+ul{list-style: none}
+a{text-decoration: none}
+body{background: gainsboro;
+    font-size:.28rem;}
+#header{
+    height: 1.01rem;
+    background: #06c1ae;
+    display: -webkit-flex;
+}
+#header-left{
+    width: 1.67rem;
+    height: 1.01rem;
+    line-height: 1.01rem;
+    color: #fff;
+    font-size: .32rem;
+    padding:0 .15rem;
+    box-sizing: border-box;
+}
+#header-search{
+    -webkit-flex: 1;
+    display: -webkit-flex;
+    background: rgba(0,0,0,.15);
+    border-radius: 0.1rem;
+    height: 0.64rem;
+    margin-top:0.185rem;
+    /*position: absolute;*/
+}
+#header-search input{
+    -webkit-flex: 1;
+    /*width: 2rem;*/
+    height: 100%;
+    border:none;
+    outline: none;
+    background: transparent;
+    /*margin-left: .4rem;*/
+
+}
+#header-right{
+    width: 0.94rem;
+    color: #fff;
+    text-align: center;
+    font-size: .2rem;;
+}
+.icon-ziyuan{
+    display: block;
+    font-size: .4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top:0.05rem;
+}
+.icon-fangdajing{
+
+    width: 0.4rem;
+
+    margin-left: 0.1rem;
+    margin-top: .18rem;
+}
+/*///////轮播图/////*/
+#img-box {
+    width: 100%;
+    /*height:220px;*/
+}
+#img-box img{
+    width: 6.4rem;
+
+}
+#list{width: 100%;
+    height: 3rem;
+    background: white;}
+#list li{
+    display: inline-block;
+    width: 1rem;
+    height:1rem;
+    margin-left: 0.1rem;
+    margin-top: 0.2rem;
+
+}
+
+#list i{
+    /*display: inline-block;*/
+    font-weight:900;
+    margin-left: .4rem;
+    margin-top: .2rem;
+    font-size:.6rem;
+    border: 1px solid transparent;
+    background: gold;
+    border-radius:0.5rem;
+}
+#list span{
+    margin-left:.4rem ;
+}
+/*/////list1//////*/
+#list1{
+    width:100%;
+    height:5rem;
+    background: white;
+    margin-top: .2rem;
+    display:-webkit-flex;
+}
+#list1 img{
+    width: 2rem;
+}
+#list1-son{
+    -webkit-flex:33.3% ;
+    height: 100%;
+}
