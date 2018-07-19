@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+      ul{list-style: none;}
+      a{text-decoration: none;line-height:30px;margin-left: 30px;}
+      .div1{width: 500px;height: 500px;margin:0 auto;}
+        .image-head{background:gainsboro;float: left;width: 100px;height: 30px;margin-right: 10px;}
+        .div1-image{width: 500px;height: 30px;border-bottom: 1px solid black;}
+        .div1-div1,.div1-div2,.div1-div3{width: 500px;height: 470px;background:greenyellow;display: none;}
+      .div1-div1{display:block;}
+        .image-head:hover{background: red;}
+
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div1-image">
+    <ul>
+        <li class="image-head head1"><a href="#">111</a></li>
+        <li class="image-head head2"><a href="">222</a></li>
+        <li class="image-head head3"><a href="">333</a></li>
+    </ul>
+    </div>
+    <div class="div1-div1 aaa" >aaa</div>
+    <div class="div1-div2 bbb">bbb</div>
+    <div class="div1-div3 ccc">ccc</div>
+</div>
+<script>
+    var odiv1image =document.getElementById('div1-image');
+    var abtn = odiv1image.getElementsByTagName('li');
+    for(var i=0;i<abtn.length;i++){abtn[i],onclick=function() {console.log(111);
+    }}
+</script>
+</body>
+</html>

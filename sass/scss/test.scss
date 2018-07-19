@@ -1,0 +1,71 @@
+$color:red!default;
+
+
+div{background:$color;
+}
+.head-logo{
+  width: 10px;
+}
+.header{
+  width:1210px;
+  margin:0 auto;
+}
+.head-logo {
+  width: 10px; }
+
+.header {
+  width: 1210px;
+  margin: 0 auto; }
+.logo{
+  width: 100px;
+  float:left;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    color:deepskyblue;
+  }
+}
+a:hover{
+  color:red;
+}
+@mixin boder(){
+  border:2px solid #ccc;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.5);
+}
+.aa{
+  width: 200px;
+  height:200px;
+  @include boder()
+}
+.bb{
+  width: 200px;
+  height:200px;
+  @include boder()
+}
+
+@mixin css3($attr,$val){
+  -webkit-#{$attr}:$val;
+
+}
+.cc{
+  @include css3(border-radius,30px);
+}
+.nn{
+  @extend .cc;
+}
+.j{
+  width:(6px/2);
+}
+@for $i from 1 through 5{
+  .item#{$i}{
+    width:20px*$i;
+  }
+}
+$j:5;
+@while($j<10){
+  .a#{$j}{
+    width:20*$j;
+  }
+  $j:$j+2;
+}

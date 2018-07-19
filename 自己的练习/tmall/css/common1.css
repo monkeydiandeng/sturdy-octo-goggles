@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration: none;}
+ul{list-style: none;}
+.nav{background:gainsboro;}
+.wrapper{margin:0 auto;
+          width:1230px;}
+.nav-box{height:33px;}
+.nav-link{display: block;padding: 0 20px 0 10px;}
+.span-word{font-size: 12px;line-height: 33px;color: black;margin-right: 20px;}
+.login-btn,.jon-in{color: black;font-size: 12px;margin-right: 20px;}
+.login-btn:hover,.jon-in:hover{color:red;}
+.nav-login{float: left;}
+.nav-menu{float: right;}
+.nav-menu>li{float: left;line-height: 33px;}
+.nav-menu li a{font-size:12px;color:black;}
+.sn-menu:hover{background:white;}
+.sn-menu::after{content: '';
+                    width: 0;
+                    height: 0;
+                    border-width:3px;
+                    border-style: solid;
+                    border-color:black transparent transparent transparent;
+                    position: absolute;
+                    right: 5px;
+                    top: 16px;
+                    transition:all 0.1s linear ;
+                    transform-origin: 3px 1.5px;}
+.sn-menu{position:relative;}
+.sn-menu:hover::after{transform: rotate(180deg)}
+.sub-menu-item{display:none;line-height: 18px;border: 1px solid ghostwhite;
+    height: 18px;}
+.sn-menu ul{position:absolute;}
+.sn-menu:hover li{display:block;}
+.sn-menu:hover>a{color:red;text-decoration: underline;}
+.sub-menu-item:hover>a{color:red;text-decoration: underline;}
